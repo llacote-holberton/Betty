@@ -3498,7 +3498,7 @@ sub process {
 			my $type = $1;
 			my $var = $2;
 			$var = "" if (!defined $var);
-			if ($type =~ /^(?:(?:$Storage|$Inline|$Attribute)\s+)*((?:un)?signed)((?:\s*\*)*)\s*$/) {
+			if ($type =~ /^(?:(?:$Storage|$Inline|$Attribute)\s+)*\b((?:un)?signed)\b((?:\s*\*)*)\s*$/) {
 				my $sign = $1;
 				my $pointer = $2;
 
